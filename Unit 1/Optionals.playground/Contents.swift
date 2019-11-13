@@ -113,24 +113,24 @@ if let validWage = wage,
 ////============================================
 ////        looping through an optional array
 ////============================================
+
+var numbers: [Int?]
+numbers = [4, 9, nil, 10, 20, nil]
+
+// add ONLY valid integers
+//var sumUnwrappedUsingOptionalBinding = 0
+//var sumUsingNilCoalescing = 0
+//var currentCount = 0
+//for currentNum in numbers {
+//    // optional binding to unwrap
+//    if let validNum = currentNum { // optional binding to unwrap the current num
+//        sumUnwrappedUsingOptionalBinding += validNum
+//    for currentCount in numbers
+//        if validNum{
+//            currentCount += 1
+//        }
+//    }
 //
-//var numbers: [Int?]
-//numbers = [4, 9, nil, 10, 20, nil]
-//
-//// add ONLY valid integers
-////var sumUnwrappedUsingOptionalBinding = 0
-////var sumUsingNilCoalescing = 0
-////var currentCount = 0
-////for currentNum in numbers {
-////    // optional binding to unwrap
-////    if let validNum = currentNum { // optional binding to unwrap the current num
-////        sumUnwrappedUsingOptionalBinding += validNum
-////    for currentCount in numbers
-////        if validNum{
-////            currentCount += 1
-////        }
-////    }
-////
 //    sumUsingNilCoalescing += num ?? 0
 //}
 //print("the sum of numbers is \(sumUnwrappedUsingOptionalBinding)")
