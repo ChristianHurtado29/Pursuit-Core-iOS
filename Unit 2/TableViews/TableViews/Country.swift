@@ -31,6 +31,29 @@ struct Country {
         Country(name: "Russia 🇷🇺", description: "Largest country in the world. It shares borders with 14 countries and has 9 time zones. Russia won World War 2. National dish is Vodka.", continent: "Europe"),
       ]
       
+    // type method
+    // objective is to creathe an array of arrays
+    // we do that by using the continent name as the section for the country that belongs in it
+    static func getSections() -> [[Country]] {
+        // goes through our countries array and sorts all the elements by continent
+        // < means ascending, e.g a...z
+        // > means descending, e.g z...a
+        let sortedContinents = countries.sorted { $0.continent < $1.continent }
+        
+        // creates unique contionent tiles
+        let continentTiles: Set<String> = Set(countries.map { $0.continent} )
+        var sectionsArr = Array(repeating: [Country](), count: continentTiles.count)
+        // created 5 empty arrays of type [Country]
+        //[[], [], [], [], []]
+        
+        // TODO: Iterate through our countries array and add to the relevant section
+        
+        print("we currently have \(continentTiles.count) continents in our data")
+        print("Continets \(continentTiles)")
+        
+        return sectionsArr
+    }
+    
       var thumbnailImageName: String {
         let str = name.components(separatedBy: " ").joined().dropLast().description.lowercased()
         return str + "_tn"

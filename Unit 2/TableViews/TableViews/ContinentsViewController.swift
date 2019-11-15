@@ -16,6 +16,9 @@ class ContinentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         continentsTableView.dataSource = self
+        
+        // test continents section
+        Country.getSections()
     }
     
 }
